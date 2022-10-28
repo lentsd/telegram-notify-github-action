@@ -1,0 +1,29 @@
+name: 'Tg Notifier About new pull request'
+inputs:
+  chat:
+    description: 'Chat to send: chat id or @channel_name'
+    required: true
+  token:
+    description: 'Telegram Bot token'
+    required: true
+  repository:
+    description: 'Repository'
+    required: true
+  prAuthor:
+    description: 'Pr author'
+    required: true
+  prNumber:  
+    description: 'Pr number'
+    required: true
+  prTitle: 
+    description: 'Pr title'
+    required: true
+  prBody: 
+    description: 'Pr body'
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: 'repeat'
+  color: 'green'
