@@ -19,7 +19,7 @@ inputs:
     description: 'Pr title'
     default: ${{ github.event.pull_request.title }}
   prBody: 
-    default: 'Pr body'
+    description: 'Pr body'
     default: ${{ github.event.pull_request.body }}
 runs:
   using: 'node16'
