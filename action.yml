@@ -8,19 +8,19 @@ inputs:
     required: true
   repository:
     description: 'Repository'
-    required: true
+    default: ${{ github.repository }}
   prAuthor:
     description: 'Pr author'
-    required: true
+    default: ${{ github.actor }}
   prNumber:  
     description: 'Pr number'
-    required: true
+    default: ${{ github.event.number }}
   prTitle: 
     description: 'Pr title'
-    required: true
+    default: ${{ github.event.pull_request.title }}
   prBody: 
-    description: 'Pr body'
-    required: true
+    default: 'Pr body'
+    default: ${{ github.event.pull_request.body }}
 runs:
   using: 'node16'
   main: 'dist/index.js'
