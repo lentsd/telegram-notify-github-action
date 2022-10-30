@@ -17,7 +17,7 @@ inputs:
     default: ${{ github.repository_owner }}
   prAuthor:
     description: 'Pr author'
-    default: ${{ github.actor }}
+    default: ${{ github.event.pull_request.user.login }}
   prNumber:  
     description: 'Pr number'
     default: ${{ github.event.number }}
