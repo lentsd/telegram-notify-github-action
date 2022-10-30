@@ -8,7 +8,7 @@ const prAuthor = core.getInput('prAuthor');
 const prNumber = core.getInput('prNumber');
 const prBody = core.getInput('prBody');
 const prTitle = core.getInput('prTitle');
-const repositoryName = core.getInput('repositoryName');
+const repositoryName = core.getInput('repositoryName').split('/')[1];
 const repositoryOwner = core.getInput('repositoryOwner');
 const ghToken = core.getInput('ghToken');
 
