@@ -6,7 +6,7 @@ inputs:
   token:
     description: 'Telegram Bot token'
     required: true
-  GITHUB_TOKEN:
+  ghToken:
     description: 'GitHub token'
     required: true
   repositoryName:

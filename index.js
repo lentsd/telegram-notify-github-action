@@ -10,7 +10,7 @@ const prBody = core.getInput('prBody');
 const prTitle = core.getInput('prTitle');
 const repositoryName = core.getInput('repositoryName');
 const repositoryOwner = core.getInput('repositoryOwner');
-const GITHUB_TOKEN = core.getInput('GITHUB_TOKEN');
+const ghToken = core.getInput('ghToken');
 
 console.log({tgtoken, chatid, prAuthor, prNumber, prBody, prTitle, repositoryName, repositoryOwner, GITHUB_TOKEN});
 
