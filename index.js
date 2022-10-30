@@ -37,15 +37,15 @@ const main = async () => {
 
     const PR_MESSAGE = `
 Опа! Новый пр #${prNumber}!
-Барин ${prAuthor} радует своих подданых:
+Master ${prAuthor} радует своих slaves!
 
-*🙋🏼Что сделали🙋🏼*: ${prTitle}
+*Сделал*: ${prTitle}
 
-*📏Файлов изменили📏*: ${changedFiles.length}
-🪜*Добавили*🪜: ${additions} строк
-🧹*Удалили*🧹: ${deletions} строк
+*Файлов изменил*: ${changedFiles.length}
+*Добавил*: ${additions} строк
+*Удалил*: ${deletions} строк
 
-*Подробнее*: 
+*А поподробнее*: 
 ${prBody}
 
 [Посмотреть прчик](https://github.com/${repositoryOwner}/${repositoryName}/pull/${prNumber})
