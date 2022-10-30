@@ -12,8 +12,6 @@ const repositoryName = core.getInput('repositoryName').split('/')[1];
 const repositoryOwner = core.getInput('repositoryOwner');
 const ghToken = core.getInput('ghToken');
 
-console.log({tgtoken, chatid, prAuthor, prNumber, prBody, prTitle, repositoryName, repositoryOwner, ghToken});
-
 const main = async () => {
 
     const bot = new Bot(tgtoken);
