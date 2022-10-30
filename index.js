@@ -12,12 +12,12 @@ const repositoryName = core.getInput('repositoryName');
 const repositoryOwner = core.getInput('repositoryOwner');
 const ghToken = core.getInput('ghToken');
 
-console.log({tgtoken, chatid, prAuthor, prNumber, prBody, prTitle, repositoryName, repositoryOwner, GITHUB_TOKEN});
+console.log({tgtoken, chatid, prAuthor, prNumber, prBody, prTitle, repositoryName, repositoryOwner, ghToken});
 
 const main = async () => {
 
     const bot = new Bot(tgtoken);
-    const octokit = new github.getOctokit(GITHUB_TOKEN);
+    const octokit = new github.getOctokit(ghToken);
 
     const reviewersByPrAuthor = {
         dnotrad: ['@plsdie', '@tim_kim_tim'],
