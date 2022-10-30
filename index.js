@@ -12,6 +12,8 @@ const repositoryName = core.getInput('repositoryName');
 const repositoryOwner = core.getInput('repositoryOwner');
 const GITHUB_TOKEN = core.getInput('GITHUB_TOKEN');
 
+console.log({tgtoken, chatid, prAuthor, prNumber, prBody, prTitle, repositoryName, repositoryOwner, GITHUB_TOKEN});
+
 const main = async () => {
 
     const bot = new Bot(tgtoken);
