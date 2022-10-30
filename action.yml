@@ -6,9 +6,15 @@ inputs:
   token:
     description: 'Telegram Bot token'
     required: true
-  repository:
-    description: 'Repository'
-    default: ${{ github.repository }}
+  GITHUB_TOKEN:
+    description: 'GitHub token'
+    required: true
+  repositoryName:
+    description: 'Repository name'
+    default: ${{ github.repository.name }}
+  repositoryName:
+    description: 'Repository name'
+    default: ${{ github.repository_owner }}
   prAuthor:
     description: 'Pr author'
     default: ${{ github.actor }}
