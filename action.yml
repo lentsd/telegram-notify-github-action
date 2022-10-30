@@ -12,8 +12,8 @@ inputs:
   repositoryName:
     description: 'Repository name'
     default: ${{ github.repository.name }}
-  repositoryName:
-    description: 'Repository name'
+  repositoryOwner:
+    description: 'Repository owner'
     default: ${{ github.repository_owner }}
   prAuthor:
     description: 'Pr author'
