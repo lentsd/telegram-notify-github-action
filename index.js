@@ -27,6 +27,8 @@ const main = async () => {
         owner: repositoryOwner,
         repo: repositoryName,
         pull_number: prNumber,
+        // TODO: add pagination or smth similar if more than 100 files
+        per_page: 100,
     });
 
     const { additions, deletions } = changedFiles.reduce((result, current) => {
