@@ -8,11 +8,13 @@ const prAuthor = core.getInput('prAuthor');
 const prNumber = core.getInput('prNumber');
 const prBody = core.getInput('prBody');
 const prTitle = core.getInput('prTitle');
+const teamNicknames = core.getInput('teamNicknames');
 const repositoryName = core.getInput('repositoryName').split('/')[1];
 const repositoryOwner = core.getInput('repositoryOwner');
 const ghToken = core.getInput('ghToken');
 
 const main = async () => {
+    console.log(teamNicknames);
 
     const bot = new Bot(tgtoken);
     const octokit = new github.getOctokit(ghToken);
