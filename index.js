@@ -14,16 +14,11 @@ const repositoryOwner = core.getInput('repositoryOwner');
 const ghToken = core.getInput('ghToken');
 
 const main = async () => {
-    console.log(JSON.parse(teamNicknames));
-
     const bot = new Bot(tgtoken);
     const octokit = new github.getOctokit(ghToken);
 
-    const reviewersByPrAuthor = {
-        dnotrad: ['@plsdie', '@tim_kim_tim'],
-        overkam: ['@lentsd', '@tim_kim_tim'],
-        timkimtim: ['@lentsd', '@plsdie'],
-    };
+    const teamNicknamesParsed = JSON.parse(teamNicknames);
+    const reviewersForPr = teamNicknamesParsed.filter((user) => user[0] !== prAuthor).map(user => `@${user[1]}`)
 
     const { data: changedFiles } = await octokit.rest.pulls.listFiles({
         owner: repositoryOwner,
@@ -58,7 +53,7 @@ Nicknames: ${teamNicknames}
 `
 
     const REVIEWERS = `
-${reviewersByPrAuthor[prAuthor].reduce((res, next) => res += `${next} `, '')}
+${reviewersForPr.reduce((res, next) => res += `${next} `, '')}
 `
 
     bot.sendMessage(chatid, PR_MESSAGE, { parse_mode: "Markdown" });
