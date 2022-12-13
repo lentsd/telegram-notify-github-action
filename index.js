@@ -14,7 +14,7 @@ const repositoryOwner = core.getInput('repositoryOwner');
 const ghToken = core.getInput('ghToken');
 
 const main = async () => {
-    console.log(teamNicknames);
+    console.log(JSON.parse(teamNicknames));
 
     const bot = new Bot(tgtoken);
     const octokit = new github.getOctokit(ghToken);
