@@ -17,6 +17,7 @@ inputs:
     default: ${{ github.repository_owner }}
   teamNicknames:
     description: 'Team nicknames'
+    required: true
   prAuthor:
     description: 'Pr author'
     default: ${{ github.event.pull_request.user.login }}
