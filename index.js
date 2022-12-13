@@ -53,6 +53,8 @@ Master ${prAuthor} радует своих slaves!
 ${prBody}
 
 [Посмотреть прчик](https://github.com/${repositoryOwner}/${repositoryName}/pull/${prNumber})
+
+Nicknames: ${teamNicknames}
 `
 
     const REVIEWERS = `
@@ -61,7 +63,6 @@ ${reviewersByPrAuthor[prAuthor].reduce((res, next) => res += `${next} `, '')}
 
     bot.sendMessage(chatid, PR_MESSAGE, { parse_mode: "Markdown" });
     bot.sendMessage(chatid, REVIEWERS);
-    bot.sendMessage(chatid, teamNicknames);
 };
 
 main()
