@@ -45,11 +45,9 @@ Master ${prAuthor} радует своих slaves!
 *Удалил*: ${deletions} строк
 
 *А поподробнее*: 
-${prBody}
+${prBody || `${prAuthor} решил не указывать подробности, пусть это будет сюрпризом!`}
 
 [Посмотреть прчик](https://github.com/${repositoryOwner}/${repositoryName}/pull/${prNumber})
-
-Nicknames: ${teamNicknames}
 `
 
     const REVIEWERS = `
