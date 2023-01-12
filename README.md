@@ -21,7 +21,7 @@ Change the nicknames of the teams from the example to yours
 - Link to PR
 
 ## Action example
-### Add it to .gihub/workflows
+### Add it to .github/workflows
 ```sh
 name: New PR Telegram Notify
 on:
