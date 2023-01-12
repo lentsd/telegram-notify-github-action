@@ -5,7 +5,7 @@ All you need is:
 
 - Create a telegram bot and add it to your group 
 
-Add this params to github secrets for your repo
+Add these parameters to github secrets for your repository
 
 - Telegram bot token
 - Telegram chat id
