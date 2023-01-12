@@ -3,9 +3,14 @@
 
 All you need is:
 
+- Create a telegram bot and add it to your group 
+
+Add this params to github secrets for your repo
+
 - Telegram bot token
 - Telegram chat id
-- Team nicknames
+
+Change the nicknames of the teams from the example to yours
 
 ## Info in message
 
